@@ -41,11 +41,11 @@ namespace CdOrganizer.Controllers
       return View(selectedArtist);
     }
 
-    [HttpPost("/artistClear")]
+    [HttpPost("/clearAllArtists")]
     public ActionResult ClearAllArtists()
     {
       Artist.ClearAll();
-      return View("AllArtists");
+      return View();
     }
 
 
