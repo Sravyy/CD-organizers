@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add a CD by @Model["artist"].GetName()</h1>
+<form  action="/cds" method="post">
+  <input name="artist-id" type="hidden" value='@Model["artist"].GetId()'>
+  Title : <input type="text" name="add-cd" >
+  <button type='submit'>Add CD</button>
+
+</form>

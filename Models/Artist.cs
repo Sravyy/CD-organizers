@@ -8,11 +8,15 @@ namespace CdOrganizer.Models
     private int _id;
     private static List<Artist> _instances = new List<Artist> {};
 
+    private List<Cd> _cds;
+
     public Artist(string artistName)
     {
       _name = artistName;
       _instances.Add(this);
       _id = _instances.Count;
+
+      _cds = new List<Cd>{};
     }
 
     public string GetName()
@@ -41,7 +45,20 @@ namespace CdOrganizer.Models
 
 
 
+    public void AddCd(Cd cd)
+    {
+      _cds.Add(cd);
+    }
 
+    public List<Cd> GetCds()
+    {
+      return _cds;
+    }
+
+    public void ClearCds()
+    {
+      _cds = new List<Cd>{};
+    }
 
 
 
